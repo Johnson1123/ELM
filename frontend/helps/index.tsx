@@ -8,7 +8,7 @@ export const apiDomain = (): string => {
   if (process.env.NEXT_PUBLIC_NODE_APP == "Development") {
     return process.env.NEXT_PUBLIC_BACKEND_URL || "";
   } else {
-    return process.env.NEXT_PUBLIC_API_DEVELOPMENT_URL || "";
+    return process.env.NEXT_PUBLIC_API_PRODUCTION_URL || "";
   }
 };
 
