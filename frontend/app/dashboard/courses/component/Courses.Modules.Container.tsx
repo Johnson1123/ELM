@@ -9,7 +9,7 @@ const CoursesModulesContainer = (props: Props) => {
     <div className="flex gap-2">
       <LeftProgress modules={3} />
       <div className="">
-        <CourseModule title="Introduction to Javascript" duration="30 min" />
+        <CourseModule course="Introduction to Javascript" />
       </div>
     </div>
   );

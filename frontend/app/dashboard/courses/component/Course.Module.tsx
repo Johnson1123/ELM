@@ -3,8 +3,8 @@ import { getHoursMinute } from "@/helps";
 import React, { FC } from "react";
 
 type Props = {
-  course: any;
-  index: number;
+  course?: any;
+  index?: number;
 };
 
 const CourseModule: FC<Props> = ({ course, index }) => {
