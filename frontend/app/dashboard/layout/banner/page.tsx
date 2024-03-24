@@ -13,7 +13,7 @@ import { ThreeDots } from "react-loader-spinner";
 
 type Props = {};
 
-const page = (props: Props) => {
+const Page = (props: Props) => {
   // const [formData, setFormData] = useState({
   //   image: "",
   //   title: "",
@@ -143,4 +143,4 @@ const page = (props: Props) => {
   );
 };
 
-export default page;
+export default Page;

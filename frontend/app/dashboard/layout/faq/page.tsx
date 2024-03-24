@@ -15,7 +15,7 @@ import { HiMinusSm } from "react-icons/hi";
 
 type Props = {};
 
-const page = (props: Props) => {
+const Page = (props: Props) => {
   const [faq, setFaq] = useState<
     { question: string; answer: string; _id?: string }[]
   >([{ question: "", answer: "" }]);
@@ -183,4 +183,4 @@ const page = (props: Props) => {
   );
 };
 
-export default page;
+export default Page;

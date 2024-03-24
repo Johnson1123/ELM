@@ -13,7 +13,7 @@ import { ThreeDots } from "react-loader-spinner";
 
 type Props = {};
 
-const category = (props: Props) => {
+const Category = (props: Props) => {
   const [category, setCategory] = useState([
     {
       title: "",
@@ -135,4 +135,4 @@ const category = (props: Props) => {
   );
 };
 
-export default category;
+export default Category;
