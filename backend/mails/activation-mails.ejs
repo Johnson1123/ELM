@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,500;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Welcome to Elite Learning</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100%;
+        padding: 10px;
+
+        font-family: "Ubuntu", sans-serif;
+      }
+      .wrapper {
+        width: 100%;
+      }
+      .welcome {
+        background-color: #0174be;
+        width: 100%;
+        text-align: center;
+        line-height: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: #fff;
+        font-weight: 700;
+      }
+      .name {
+        font-size: 14px;
+        font-weight: 500;
+      }
+      p {
+        color: #484747;
+        font-size: 14px;
+        line-height: 1.4;
+        padding: 10px;
+      }
+      h2 {
+        font-size: 16px;
+        font-weight: 500;
+        text-decoration: none;
+        padding: 0 5px;
+      }
+      h3 {
+        text-align: center;
+        font-size: 25px;
+        letter-spacing: 5;
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="welcome">Welcome to Elite Learning</h1>
+      <p>
+        Hello <span class="name"><%= user.name %></span> Thank you for register
+        on ELite Learning Platform, we appreciate you action.
+        <br />
+        <br />
+        to continue with us please Provide the following code to confirm your
+        Email.
+      </p>
+      <p>activation code expire in 5 minute</p>
+      <h3><%= activationCode %></h3>
+      <p>
+        having any technical issue or question? feel free contact us through
+        <a href="mailto:onifadejohnson2o14@gmail.com">Elite Support</a>
+      </p>
+    </div>
+  </body>
+</html>

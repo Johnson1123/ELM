@@ -1,0 +1,5 @@
+.roundedImageShadow {
+  box-shadow: 8px 1px 28px 21px rgba(0, 40, 76, 0.6) inset;
+  -webkit-box-shadow: 8px 1px 28px 21px rgba(0, 40, 76, 0.6) inset;
+  -moz-box-shadow: 8px 1px 28px 21px rgba(0, 40, 76, 0.6) inset;
+}

@@ -1,0 +1,7 @@
+.loading {
+  border: "5px solid red";
+  height: 50;
+  width: 50;
+  border-bottom: 0;
+  transform: rotate(360deg);
+}
