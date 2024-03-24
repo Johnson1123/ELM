@@ -1,10 +1,11 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { loadUser } from "../slice/auth.slice";
+import { apiDomain } from "@/helps";
 
 const apiSlice = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
-    baseUrl: process.env.NEXT_PUBLIC_BACKEND_URL,
+    baseUrl: apiDomain(),
   }),
   endpoints: (builder) => ({
     refresToken: builder.query({
