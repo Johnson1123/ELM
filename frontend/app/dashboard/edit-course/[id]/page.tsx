@@ -15,7 +15,7 @@ import CoursePreview from "../../createcourse/Course.Preview";
 
 type Props = {};
 
-const editCourse = ({ params }: any) => {
+const EditCourse = ({ params }: any) => {
   const id = params?.id;
   const { data: course, error: courseError } = useGetAllCourseQuery(
     {},
@@ -168,4 +168,4 @@ const editCourse = ({ params }: any) => {
   );
 };
 
-export default editCourse;
+export default EditCourse;
