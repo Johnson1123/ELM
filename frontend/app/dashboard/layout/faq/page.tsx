@@ -29,9 +29,25 @@ const Page = (props: Props) => {
       setFaq(faqData?.data.faq);
     }
   }, [faqData]);
-  const [insertFAQ, { isLoading, data, error, isSuccess }] = faqData?.data.faq
-    ? usePutLayoutMutation()
-    : useInsertLayoutMutation();
+  const [
+    putFAQ,
+    {
+      isLoading: putLoading,
+      data: putData,
+      error: putError,
+      isSuccess: PutSuccess,
+    },
+  ] = usePutLayoutMutation();
+  const [
+    insertFAQ,
+    {
+      isLoading: insertLoading,
+      data: insertData,
+      error: insertError,
+      isSuccess: insertSuccess,
+    },
+  ] = useInsertLayoutMutation();
+
   const handleFAQ = () => {
     if (
       faq[faq.length - 1].answer !== "" &&
@@ -44,6 +60,12 @@ const Page = (props: Props) => {
       toast.error("Fill last FAQ");
     }
   };
+
+  const faqReq = faqData?.data.faq ? putFAQ : insertFAQ;
+  const data = faqData?.data.faq ? putData : insertData;
+  const isLoading = faqData?.data.faq ? putLoading : insertLoading;
+  const error = faqData?.data.faq ? putError : insertError;
+  const isSuccess = faqData?.data.faq ? PutSuccess : insertSuccess;
 
   const handleChangeQuestion = (index: number, value: string) => {
     const changeFAQ = [...faq];
@@ -73,7 +95,7 @@ const Page = (props: Props) => {
   };
 
   const handleSubmit = async () => {
-    await insertFAQ({ type: "Faq", faq });
+    await faqReq({ type: "Faq", faq });
   };
   const handleCollapse = (id: number) => {
     const check = id == collapse ? true : false;

@@ -25,12 +25,33 @@ const Category = (props: Props) => {
   });
 
   const [
-    insertcategory,
-    { isLoading, error, data: mutationData, isSuccess: mutationSuccessful },
-  ] = dataCategory?.data?.category
-    ? usePutLayoutMutation()
-    : useInsertLayoutMutation();
+    PutCategory,
+    {
+      isLoading: putLoading,
+      data: putData,
+      error: putError,
+      isSuccess: PutSuccess,
+    },
+  ] = usePutLayoutMutation();
+  const [
+    insertCategory,
+    {
+      isLoading: insertLoading,
+      data: insertData,
+      error: insertError,
+      isSuccess: insertSuccess,
+    },
+  ] = useInsertLayoutMutation();
 
+  const categoryReq = dataCategory?.data?.category
+    ? PutCategory
+    : insertCategory;
+  const mutationData = dataCategory?.data?.category ? putData : insertData;
+  const isLoading = dataCategory?.data?.category ? putLoading : insertLoading;
+  const error = dataCategory?.data?.category ? putError : insertError;
+  const mutationSuccessful = dataCategory?.data?.category
+    ? PutSuccess
+    : insertSuccess;
   const handleCategory = () => {
     if (category[category.length - 1].title !== "") {
       const updatecategory = [...category];
@@ -61,7 +82,7 @@ const Category = (props: Props) => {
 
   const handleSubmit = async () => {
     const data = { type: "Category", category: category };
-    await insertcategory(data);
+    await categoryReq(data);
   };
   useEffect(() => {
     if (dataCategory?.data?.category) {
@@ -92,6 +113,7 @@ const Category = (props: Props) => {
                   ? "mb-5 flex flex-col"
                   : "mb-10 flex flex-col"
               }
+              key={index}
             >
               <div className="flex w-full justify-between items-center">
                 <p className="text-md">Category {index + 1}</p>
