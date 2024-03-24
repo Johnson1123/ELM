@@ -51,10 +51,10 @@ const CouseContent = (props: Props) => {
       </p>
       <div className=""></div>
       {courseData &&
-        courseData.courseData.map((item: any, i: any) => {
+        courseData.courseData.map((item: any, i: number) => {
           const [h, m] = getHoursMinute(item.videoLenght);
           return (
-            <div className="">
+            <div className="" key={i}>
               <div
                 className="flex justify-between px-2 mt-2 items-center cursor-pointer"
                 onClick={() => {

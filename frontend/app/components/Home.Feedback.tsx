@@ -19,7 +19,7 @@ const HomeFeedback = (props: Props) => {
             Our Students Feedback
           </p>
           <p className="text-center md:text-left">
-            I appreciate the effort you've put into creating this learning
+            I appreciate the effort you&apos;ve put into creating this learning
             platform, and I believe addressing these points could make it an
             even more effective tool for aspiring programmers.
           </p>

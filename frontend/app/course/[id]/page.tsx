@@ -10,7 +10,7 @@ type Props = {
   params: any;
 };
 
-const page: React.FC<Props> = ({ params }) => {
+const Page: React.FC<Props> = ({ params }) => {
   const id = params?.id;
   const [course, setCourse] = useState<any>();
   const { data } = useGetCourseQuery(id, { refetchOnMountOrArgChange: true });
@@ -35,4 +35,4 @@ const page: React.FC<Props> = ({ params }) => {
   );
 };
 
-export default page;
+export default Page;

@@ -6,7 +6,7 @@ import { RotatingTriangles } from "react-loader-spinner";
 
 type Props = {};
 
-const page = (props: Props) => {
+const Page = (props: Props) => {
   const { data, isLoading } = useGetCourseAnalyticsQuery({});
   return (
     <div className="">
@@ -17,4 +17,4 @@ const page = (props: Props) => {
   );
 };
 
-export default page;
+export default Page;

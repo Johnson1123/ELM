@@ -10,7 +10,7 @@ type Props = {
   params: any;
 };
 
-const page: React.FC<Props> = ({ params }) => {
+const Page: React.FC<Props> = ({ params }) => {
   const navigate = useRouter();
   const { id } = params;
 
@@ -40,4 +40,4 @@ const page: React.FC<Props> = ({ params }) => {
   );
 };
 
-export default page;
+export default Page;

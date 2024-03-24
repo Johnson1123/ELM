@@ -1,5 +1,7 @@
 import { useGetLayoutQuery } from "@/redux/features/slice/layout";
 import React, { FC, useState } from "react";
+import Image from "next/image";
+import { myTheme } from "../../../theme";
 
 type Props = {
   active: number;
@@ -146,7 +148,7 @@ const CourseInfomation: FC<Props> = ({
               Category
             </label>
             <select
-              placeholder="estimatedPrice"
+              // placeholder="estimatedPrice"
               className=" h-[40px] rounded-md focus:outline-none py-2 px-1 border border-1 border-slate-300"
               value={courseInfo.category}
               onChange={(e: any) =>
@@ -159,7 +161,7 @@ const CourseInfomation: FC<Props> = ({
               {categoryData?.data &&
                 categoryData?.data.category.map((item: any, i: number) => {
                   return (
-                    <option value={item.title} className="py-2">
+                    <option value={item.title} className="py-2" key={i}>
                       {item.title}
                     </option>
                   );
@@ -215,7 +217,12 @@ const CourseInfomation: FC<Props> = ({
           htmlFor="file"
         >
           {courseInfo.thumbnail ? (
-            <img src={courseInfo.thumbnail} alt="course thumbnails" />
+            <Image
+              src={courseInfo.thumbnail}
+              height={myTheme.dimension.image.thumbnail.height}
+              width={myTheme.dimension.image.thumbnail.width}
+              alt="course thumnails"
+            />
           ) : (
             "Drag and drop your image here"
           )}

@@ -12,7 +12,7 @@ import toast from "react-hot-toast";
 
 type Props = {};
 
-const createcourse = (props: Props) => {
+const Createcourse = (props: Props) => {
   const [active, setActive] = useState(0);
   const navigate = useRouter();
 
@@ -140,4 +140,4 @@ const createcourse = (props: Props) => {
   );
 };
 
-export default createcourse;
+export default Createcourse;

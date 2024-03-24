@@ -18,7 +18,7 @@ function HomeFaqCard({ faq, index, active, setActive }: Props) {
     }
   };
   return (
-    <div key={index}>
+    <>
       <div className="flex justify-between py-4 items-center">
         <p className="text-[20px] font-bold">{faq.question}</p>
         <div
@@ -33,7 +33,7 @@ function HomeFaqCard({ faq, index, active, setActive }: Props) {
           {faq.answer}
         </div>
       )}
-    </div>
+    </>
   );
 }
 

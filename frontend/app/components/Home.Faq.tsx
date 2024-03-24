@@ -25,12 +25,14 @@ function HomeFaq() {
           faq.length > 0 &&
           faq.map((item, index) => {
             return (
-              <HomeFaqCard
-                faq={item}
-                setActive={setActive}
-                active={active}
-                index={index}
-              />
+              <div key={index}>
+                <HomeFaqCard
+                  faq={item}
+                  setActive={setActive}
+                  active={active}
+                  index={index}
+                />
+              </div>
             );
           })}
       </div>
