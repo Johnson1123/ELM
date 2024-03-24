@@ -5,10 +5,10 @@ export const getHoursMinute = (total: number) => {
 };
 
 export const apiDomain = (): string => {
-  if (process.env.NODE_APP == "Development") {
+  if (process.env.NEXT_PUBLIC_NODE_APP == "Development") {
     return process.env.NEXT_PUBLIC_BACKEND_URL || "";
   } else {
-    return process.env.API_DEVELOPMENT_URL || "";
+    return process.env.NEXT_PUBLIC_API_DEVELOPMENT_URL || "";
   }
 };
 

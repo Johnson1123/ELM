@@ -3,7 +3,6 @@ import { IoCheckmarkDoneOutline } from "react-icons/io5";
 import React, { FC, useEffect, useState } from "react";
 import Link from "next/link";
 import VideoPlayer from "@/utils/Video.Player";
-import { useSelector } from "react-redux";
 import { btnPrimary } from "@/utils/style";
 import Coursecontent from "./course.content";
 import { Elements } from "@stripe/react-stripe-js";

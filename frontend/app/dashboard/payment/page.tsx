@@ -1,5 +1,5 @@
 "use client";
-import { useFlutterwave, closePaymentModal } from "flutterwave-react-v3";
+// import { useFlutterwave, closePaymentModal } from "flutterwave-react-v3";
 type Props = {};
 
 const page = (props: Props) => {
@@ -21,13 +21,13 @@ const page = (props: Props) => {
     },
   };
 
-  const handleFlutterPayment = useFlutterwave(config);
+  // const handleFlutterPayment = useFlutterwave(config);
 
   return (
     <div className="min-h-[70vh] flex justify-center items-center flex-col">
       <h1>Hello Test user</h1>
 
-      <button
+      {/* <button
         onClick={() => {
           handleFlutterPayment({
             callback: (response) => {
@@ -39,7 +39,7 @@ const page = (props: Props) => {
         }}
       >
         Payment with React hooks
-      </button>
+      </button> */}
     </div>
   );
 };

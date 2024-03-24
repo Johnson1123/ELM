@@ -191,8 +191,8 @@ export const getCompanyName = () => {
   return "JohnsonTech";
 };
 
-export const getAppDomian = () => {
-  switch (process.env.DOMAIN) {
+export const getEnvironment = () => {
+  switch (process.env.NEXT_NODE_APP) {
     case "development":
       return "http://localhost:3000";
       break;
