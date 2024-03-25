@@ -25,7 +25,7 @@ export type ICourse = {
 
 const CourseCard = (props: ICourse) => {
   return (
-    <div className="p-5 hover:bg-white rounded-lg w-[100%] md:max-w-[32%]  shadow-md duration-500 hover:shadow-xl hover:text-black">
+    <div className="p-5 hover:bg-white rounded-lg w-[100%] shadow-md duration-500 hover:shadow-xl hover:text-black">
       <div className="w-full h-[200px]">
         <Image
           src={props.image}

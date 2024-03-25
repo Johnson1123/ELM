@@ -20,7 +20,7 @@ function HomeFaqCard({ faq, index, active, setActive }: Props) {
   return (
     <>
       <div className="flex justify-between py-4 items-center">
-        <p className="text-[20px] font-bold">{faq.question}</p>
+        <p className="text-[20px] font-semibold">{faq.question}</p>
         <div
           className="cursor-pointer"
           onClick={() => handleOpen(active, index)}

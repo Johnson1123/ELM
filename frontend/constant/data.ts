@@ -204,3 +204,26 @@ export const getEnvironment = () => {
       break;
   }
 };
+
+export interface homeFeedbackPrps {
+  comment: string;
+  name: string;
+  image: string;
+  location: string;
+}
+export const homeFeedback: homeFeedbackPrps[] = [
+  {
+    comment:
+      "I appreciate the effort you've put into creating this learning platform, and I believe addressing these points could make it aneven more effective tool for aspiring programmers.  points could make it aneven more effective tool for aspiring programmers.",
+    name: "Johnson Kayode",
+    image: "",
+    location: "lagos, Nigeria",
+  },
+  {
+    comment:
+      "I appreciate the effort you&apos;ve put into creating this learning platform, and I believe addressing these points could make it an even more effective tool for aspiring programmers.",
+    name: "Ruth Paul",
+    image: "jus",
+    location: "Osun, Nigeria",
+  },
+];

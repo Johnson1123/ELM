@@ -23,7 +23,7 @@ const HomeCourse = (props: Props) => {
         <h3 className="font-Poppins text-lg md:text-2xl font-[900] leading-[1.6] md:leading-[1.7] dark:text-white text-center my-10">
           Our Featured Courses
         </h3>
-        <div className="w-[92%] md:w-[75%] mx-auto flex gap-5 rounded-md justify-center  flex-wrap flex-col md:flex-row">
+        <div className="w-[92%] md:w-[75%] grid md:grid-cols-2 lg:grid-cols-3 mx-auto gap-5 rounded-md justify-center  flex-wrap flex-col md:flex-row">
           {courses &&
             courses.length > 0 &&
             courses.map((item, index) => {

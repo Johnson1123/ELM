@@ -7,7 +7,7 @@ type Props = {
 
 const HeroMan = ({ url }: Props) => {
   return (
-    <div className="absolute top-0 left-0 z-20 flex justify-center w-full h-full overflow-hidden pt-5">
+    <div className="absolute top-0 md:top-[18%] lg:top-0  left-0 z-20  justify-center w-full h-full overflow-hidden pt-5">
       <Image
         src={url}
         alt="hero image"
@@ -15,7 +15,6 @@ const HeroMan = ({ url }: Props) => {
         height={500}
         className="overflow-hidden md:ml-10 object-contain absolute z-10"
       />
-      <div className="h-[300px] w-[300px] absolute z-9 bg-[red] rounded-full animate-ping top-[50%] -translate-y-[50%]"></div>
     </div>
   );
 };

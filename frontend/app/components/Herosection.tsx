@@ -32,7 +32,7 @@ const Hero = (props: Props) => {
           className={`w-full mt-[80px] ${darkBg} relative`}
           style={{ height: "calc(100vh - 80px)" }}
         >
-          <div className="h-full hero-container flex flex-col md:flex-row w-[95%] md:w-[75%] mx-auto">
+          <div className="h-full hero-container flex flex-col md:flex-row w-[95%] md:w-[85%] lg:w-[75%] mx-auto justify-between">
             <div className="w-[95%] md:w-[40%] h-auto md:h-full">
               <div className="flex flex-col justify-center items-center md:items-start md:h-full mt-5">
                 <h3 className="font-Poppins text-2xl text-center md:text-left md:text-3xl font-[900] leading-[1.6] md:leading-[1.7]">
@@ -51,7 +51,7 @@ const Hero = (props: Props) => {
                 </button>
               </div>
             </div>
-            <div className="w-[92%] h-full md:w-[60%] relative">
+            <div className="w-[92%] md:w-[55%] h-full relative ">
               <NextIcon />
               <FaceIcon />
               <BooksICon />
