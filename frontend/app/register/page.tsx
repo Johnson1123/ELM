@@ -65,7 +65,7 @@ const Register = () => {
       <>
         <div
           className={`${darkBg}} bg-[#f3f3f3]  mt-[80px]`}
-          style={{ height: "calc(100vh - 80px)" }}
+          style={{ minHeight: "calc(100vh - 80px)" }}
         >
           <div className="w-[92%] md:w-[40%] flex mx-auto py-5 justify-center items-center h-full">
             <div className="w-[85%]">

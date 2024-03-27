@@ -211,6 +211,14 @@ export interface homeFeedbackPrps {
   image: string;
   location: string;
 }
+export interface userTypeProps {
+  name: string;
+  email: string;
+  role: "user" | "admin" | "tutor";
+  password?: string;
+  isVerifield?: boolean;
+  courses?: any[];
+}
 export const homeFeedback: homeFeedbackPrps[] = [
   {
     comment:

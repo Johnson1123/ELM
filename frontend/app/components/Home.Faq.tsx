@@ -10,7 +10,7 @@ function HomeFaq() {
 
   useEffect(() => {
     if (data) {
-      setFaq(data.data.faq);
+      setFaq(data?.data?.faq);
     }
   }, [data]);
   return (

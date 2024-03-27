@@ -119,7 +119,7 @@ export const loginUser = asyncError(
   async (req: Request, res: Response, next: NextFunction) => {
     try {
       const { email, password } = req.body as ILOGIN;
-      const user = await userModel.findOne({ email }).select("+password");
+      const user = await userModel.findOne({ email }).select({ password: -1 });
       if (!email || !password) {
         return next(new ErrorHandler("send all credential", 400));
       }

@@ -23,8 +23,8 @@ function CompanyLogo() {
         </div>
         <h3 className="font-Poppins mt-1">Delight Academia</h3>
       </div>
-      <div className="flex gap-5 w-full justify-center mt-5 py-5">
-        <div className="flex flex-col gap-5 ">
+      <div className="flex gap-5 w-full justify-center mt-5 py-5 px-3">
+        <div className="flex flex-col gap-5 w-full ">
           <DbNavBox
             path={"dashboard"}
             name={"Dashboard"}

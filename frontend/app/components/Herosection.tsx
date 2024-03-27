@@ -19,7 +19,7 @@ const Hero = (props: Props) => {
 
   useEffect(() => {
     if (data) {
-      setLayout(data.data.banner);
+      setLayout(data?.data?.banner);
     }
   }, [data]);
 
