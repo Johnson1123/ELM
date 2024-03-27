@@ -18,7 +18,7 @@ app.use(express.json({ limit: "50mb" }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: origin,
     credentials: true,
   })
 );
@@ -30,11 +30,6 @@ app.use(
   layoutRoutes,
   orderRoutes
 );
-app.get("/get", (req: Request, res: Response) => {
-  res.status(200).json({
-    message: "worked",
-  });
-});
 // const options = {
 //   definition: {
 //     openapi: "3.1.0",
