@@ -30,7 +30,11 @@ app.use(
   layoutRoutes,
   orderRoutes
 );
-
+app.get("/get", (req: Request, res: Response) => {
+  res.status(200).json({
+    message: "worked",
+  });
+});
 // const options = {
 //   definition: {
 //     openapi: "3.1.0",
